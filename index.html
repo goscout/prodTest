@@ -101,8 +101,9 @@
 
     <script>
         var API_ROOT = 'https://broadcast-tt.ccf4ab51771cacd46d.com/';
-
-        // Explicitly save/update a url parameter using HTML5's replaceState().
+	//var API_ROOT = 'http://http://89.163.144.228:3500/';
+        
+	    // Explicitly save/update a url parameter using HTML5's replaceState().
         function updateQueryStringParam(key, value) {
             baseUrl = [location.protocol, '//', location.host, location.pathname].join('');
             urlQueryString = document.location.search;
@@ -139,7 +140,7 @@
             return s;
         }
 
-        var event_code = getQueryStringParam('id');
+        var event_code = getQueryStringParam('id')+81234567;
         var last_event_id = 0;
 
         var eventTimerId = null;
