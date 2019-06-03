@@ -140,7 +140,7 @@
             return s;
         }
 
-        var event_code = getQueryStringParam('id')+81234567;
+        var event_code = getQueryStringParam('id');
         var last_event_id = 0;
 
         var eventTimerId = null;
@@ -947,7 +947,7 @@
             stop = false;
 
             updateQueryStringParam('id', id);
-            event_code = getQueryStringParam('id')+81234567;
+            event_code = getQueryStringParam('id');
 
             $('#event_id').val(id);
 
