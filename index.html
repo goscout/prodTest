@@ -267,6 +267,7 @@
                 case 1518:
                 case 1522:
                 case 1530:
+		case 1531:
                 case 1532:
                     res = pad(Math.trunc(event.i2 / 60), 2) + ":" + pad(event.i2 % 60, 2) + ' (' + event.i3 + ' четв.)';
                     break;
@@ -280,6 +281,10 @@
                 case 1550:
 				    res = pad(Math.trunc(event.i6 / 60), 2) + ":" + pad(event.i6 % 60, 2) + ' (' + event.i7 + ' четв.)';
                     break;
+			    
+		case 1310:
+                    res = pad(Math.trunc(event.i2 / 60), 2) + ":" + pad(event.i2 % 60, 2) + ' (' + event.i1 + ' четв.)';
+                    break;	    
                 default:
                     res = '';
             }
@@ -822,8 +827,20 @@
 				case 1534:
                     res = 'Промах команды ' + event.i1 + ' (' + event.i4 + ' очков)';
                     break;
+			    case 1520:
+                    res = 'Персональный фол команды ' + event.i1 ;
+                    break;
 				case 2031:
                     res = 'Формат матча: ' + event.i1 + 'x' + event.i2;
+                    break;
+			    	case 1310:
+                    res = 'Вбрасывание мяча ';
+                    break;
+			    	    	case 1570:
+                    res = 'Возможен штрафной бросок ';
+                    break;
+			    case 1531:
+                    res = 'Потеря мяча у команды ' + event.i1 ;
                     break;
 
                 case 1536:
