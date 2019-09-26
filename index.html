@@ -888,26 +888,37 @@
 			    // volleyball
 			    case 1119:
 			    res = 'Подача команды ' + event.i1 ; 
+			    break;
 			    case 1182:
 			    res = 'Подача принята '  ; 
+			    break;
 			    case 1183:
 			    res = 'Атака команды ' + event.i1 ; 
+			    break;
 			    case 1184:
 			    res = 'Блок команды ' + event.i1 ;
+			    break;
 			    case 1185:
 			    res = 'Аут команды ' + event.i1 ;
+			    break;
 			    case 1186:
 			    res = 'Ошибка команды ' + event.i1 ;
+			    break;
 			    case 1187:
 			    res = 'Пенальти (штраф) команде ' + event.i1;
+			    break;
 		    	    case 1160:
 			    res = 'Очко команде ' + event.i1 + ((event.i2 == 0) ? ' ' : '(корректировка очка)'); 
+			    break;
 			    case 1211:
 			    res = 'Счет ' + event.i1 + '-го сета' + ' (' + event.i2 + ':' + event.i3 + ') ';
+			    break;
 			    case 1220:
 			    res = 'Счет фол-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
+			    break;
 			    case 1221:
 			    res = 'Счет эйс-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
+			    break;
 			    
                 default:
                     res = event.type;
