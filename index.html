@@ -285,8 +285,13 @@
 		case 1310:
                     res = pad(Math.trunc(event.i2 / 60), 2) + ":" + pad(event.i2 % 60, 2) + ' (' + event.i1 + ' четв.)';
                     break;
+		
 		case 1212:
+		case 1211:
                     res = '(' + event.i1 + ' сет)';
+                    break;
+		case 1160:
+                    res = '(' + event.i3 + ' сет)';
                     break;
 		case 1180:
                     res = pad(event.i7, 2) + ":00" + ' (' + event.i1 + ' сет)';
@@ -879,6 +884,25 @@
 		case 1122:
                     res = 'Переход подачи команде ' + event.i1 ;
                     break;
+			    case 1119:
+			    res = 'Подача команды ' + event.i1 ; 
+			    case 1182:
+			    res = 'Подача принята '  ; 
+			    case 1183:
+			    res = 'Атака команды ' + event.i1 ; 
+			    case 1184:
+			    res = 'Блок команды ' + event.i1 ;
+			    case 1185:
+			    res = 'Аут команды ' + event.i1 ;
+			    case 1186:
+			    res = 'Ошибка команды ' + event.i1 ;
+			    case 1187:
+			    res = 'Пенальти (штраф) команде ' + event.i1;
+		    	    case 1160:
+			    res = 'Очко команде ' + event.i1 + ((event.i2 == 0) ? ' ' : '(корректировка очка)'); 
+			    case 1211:
+			    res = 'Счет ' + event.i1 + '-го сета' + ' (' + event.i2 + ':' + event.i3 + ') ';
+			    
 			    
 			    
                 default:
