@@ -247,9 +247,9 @@
                     res = pad(event.i3, 2) + ":00";
                     break;
 				
-				case 1023:
-                    res = pad(event.i4, 2) + ":00";
-                    break;
+				//case 1023:
+                    //res = pad(event.i4, 2) + ":00";
+                    //break;
 				
 				case 1026:
                     res = pad(event.i9, 2) + ":00";
@@ -288,6 +288,8 @@
 		
 		case 1212:
 		case 1211:
+			    case 1120:
+			    case 1121:
                     res = '(' + event.i1 + ' сет)';
                     break;
 		case 1160:
@@ -911,13 +913,22 @@
 			    res = 'Очко команде ' + event.i1 + ((event.i2 == 0) ? ' ' : '(корректировка очка)'); 
 			    break;
 			    case 1211:
-			    res = 'Счет ' + event.i1 + '-го сета' + ' (' + event.i2 + ':' + event.i3 + ') ';
+			    res = event.i1 + ' сет:' + ' (' + event.i2 + ':' + event.i3 + ') ';
+			    break;
+			    case 1219:
+			    res = 'Счет эйс-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
 			    break;
 			    case 1220:
 			    res = 'Счет фол-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
 			    break;
-			    case 1221:
-			    res = 'Счет эйс-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
+			    case 1120:
+			    res = 'Эйс команды '  + event.i2;
+			    break;
+			    case 1121:
+			    res = 'Фол-подача команды '  + event.i2;
+			    break;
+			    case 1023:
+			    res = 'Пересмотр изменения счета ';
 			    break;
 			    
                 default:
