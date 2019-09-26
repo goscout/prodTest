@@ -884,6 +884,8 @@
 		case 1122:
                     res = 'Переход подачи команде ' + event.i1 ;
                     break;
+			    
+			    // volleyball
 			    case 1119:
 			    res = 'Подача команды ' + event.i1 ; 
 			    case 1182:
@@ -902,8 +904,10 @@
 			    res = 'Очко команде ' + event.i1 + ((event.i2 == 0) ? ' ' : '(корректировка очка)'); 
 			    case 1211:
 			    res = 'Счет ' + event.i1 + '-го сета' + ' (' + event.i2 + ':' + event.i3 + ') ';
-			    
-			    
+			    case 1220:
+			    res = 'Счет фол-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
+			    case 1221:
+			    res = 'Счет эйс-подач ' + ' (' + event.i1 + ':' + event.i2 + ') ';
 			    
                 default:
                     res = event.type;
