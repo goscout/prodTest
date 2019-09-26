@@ -284,7 +284,13 @@
 			    
 		case 1310:
                     res = pad(Math.trunc(event.i2 / 60), 2) + ":" + pad(event.i2 % 60, 2) + ' (' + event.i1 + ' четв.)';
-                    break;	    
+                    break;
+		case 1212:
+                    res = '(' + event.i1 + ' сет)';
+                    break;
+		case 1180:
+                    res = pad(event.i7, 2) + ":00" + ' (' + event.i1 + ' сет)';
+                    break;
                 default:
                     res = '';
             }
@@ -859,6 +865,22 @@
                         res = "Корректировка счета, команда" + event.i1 + ":" + ((event.i5 == 1) ? " +" : " -") + event.i2;
                     }
                     break;
+		//наст
+		    case 1212:
+                    res = event.i1 + ' сет открывает команда' + event.i2;
+                    break;
+			    
+		case 1019:
+                    res = 'Игра возобновлена ' ;
+                    break;
+		case 1180:
+                    res = 'Очко команды ' + event.i2 + ' (' + event.i5 + ':' + event.i6 + ') ' + ((event.i8 == 2) ? '(фол-подача)' : '') + + ' (' + event.i3 + ':' + event.i4 + ')';
+                    break;
+		case 1122:
+                    res = 'Переход подачи команде ' + event.i1 ;
+                    break;
+			    
+			    
                 default:
                     res = event.type;
 					
